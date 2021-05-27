@@ -1,0 +1,199 @@
+<ActionBar class="action-bar">
+    <NavigationButton visibility="hidden"></NavigationButton>
+    <GridLayout columns="50, *">
+        <Label class="action-bar-title" text="Home" colSpan="2"></Label>
+
+        <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+    </GridLayout>
+</ActionBar>
+
+<StackLayout class="main-page-container" >
+
+
+    <TabView tabsPosition="top" class="tabs-sections">
+        <GridLayout *tabItem="{ title: 'UPCOMING' }">
+          <StackLayout name="UPCOMING">
+           
+            <!-- Filet Section -->
+            <FlexboxLayout justifyContent="space-between">
+                <StackLayout>
+                    <FlexboxLayout>
+                        <Button text="Physics">
+                        </Button>
+
+                    </FlexboxLayout>
+                </StackLayout>
+                <StackLayout>
+                    <FlexboxLayout>
+                        <Button text="Sort">
+                        </Button>
+                        <Button text="Filter">
+                        </Button>
+                    </FlexboxLayout>
+                </StackLayout>
+            </FlexboxLayout>
+            <!-- Filet Section -->
+
+
+
+
+
+
+            <Label class="heading1-with-bg" text="Today"></Label>
+
+            <!-- Item start-->
+            <StackLayout class="ass-item"
+                verticalAlignment="top">
+                
+
+                <FlexboxLayout
+                    flexDirection="column">
+
+                    <StackLayout
+                        verticalAlignment="top">
+
+                        <Label textWrap="true"
+                            text="21 May 2021"
+                            class="h4 pm0">
+                        </Label>
+
+                        <Label textWrap="true"
+                            text="Assignment Title"
+                            class="h2 item-heading">
+                        </Label>
+                        <Label textWrap="true"
+                            text="Term 1 Assessment"
+                            class="small-label">
+                        </Label>
+                    </StackLayout>
+
+                    <StackLayout
+                        verticalAlignment="top"
+                        class="item-actions">
+
+                        <FlexboxLayout
+                            width="100%">
+
+                            <StackLayout
+                                flexGrow="1"
+                                verticalAlignment="top">
+                                <FlexboxLayout
+                                    alignItems="center">
+                                    <StackLayout
+                                        flexGrow="1"
+                                        verticalAlignment="top">
+                                        <FlexboxLayout
+                                            flexDirection="column">
+                                            <Label
+                                                class="h4"
+                                                text="18 of 18">
+                                            </Label>
+                                            <Label
+                                                class="bar"
+                                                text="">
+                                            </Label>
+                                            <Label
+                                                class="h4"
+                                                text="submitted">
+                                            </Label>
+                                        </FlexboxLayout>
+                                    </StackLayout>
+
+
+                                    <StackLayout
+                                        flexGrow="1"
+                                        orientation="vertical">
+                                        <Image
+                                            width="50px"
+                                            height="50px"
+                                            backgroundColor="orange"
+                                            borderRadius="50%"
+                                            src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
+                                        </Image>
+                                        <Label
+                                            class="h4"
+                                            textAlignment="center"
+                                            text="Reminder">
+                                        </Label>
+                                    </StackLayout>
+
+                                </FlexboxLayout>
+
+                            </StackLayout>
+
+
+                            <StackLayout
+                                flexGrow="1"
+                                verticalAlignment="top">
+                                <FlexboxLayout
+                                    alignItems="center">
+                                    <StackLayout
+                                        flexGrow="1"
+                                        verticalAlignment="top">
+                                        <FlexboxLayout
+                                            flexDirection="column">
+                                            <Label
+                                                class="h4"
+                                                text="18 of 18">
+                                            </Label>
+                                            <Label
+                                                class="bar"
+                                                text="">
+                                            </Label>
+                                            <Label
+                                                class="h4"
+                                                text="submitted">
+                                            </Label>
+                                        </FlexboxLayout>
+                                    </StackLayout>
+
+
+                                    <StackLayout
+                                        flexGrow="1"
+                                        orientation="vertical">
+                                        <Image
+                                            width="50px"
+                                            height="50px"
+                                            backgroundColor="orange"
+                                            borderRadius="50%"
+                                            src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
+                                        </Image>
+                                        <Label
+                                            class="h4"
+                                            textAlignment="center"
+                                            text="Reminder">
+                                        </Label>
+                                    </StackLayout>
+
+                                </FlexboxLayout>
+
+                            </StackLayout>
+                        </FlexboxLayout>
+
+
+                    </StackLayout>
+                </FlexboxLayout>
+            </StackLayout>
+            <!-- Item end-->
+
+
+
+
+
+         </StackLayout>
+
+          
+        </GridLayout>
+      
+        <GridLayout *tabItem="{ title: 'PAST' }">
+          <page-router-outlet name="PAST"></page-router-outlet>
+        </GridLayout>
+      
+        <GridLayout *tabItem="{ title: 'DRAFTS' }">
+          <page-router-outlet name="DRAFTS"></page-router-outlet>
+        </GridLayout>
+        <GridLayout *tabItem="{ title: 'ALL' }">
+            <page-router-outlet name="ALL"></page-router-outlet>
+          </GridLayout>
+      </TabView>
+</StackLayout>
