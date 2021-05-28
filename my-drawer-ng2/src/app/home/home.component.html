@@ -34,8 +34,12 @@
 
             <button class="icon-btn"></button>
             <button class="icon-btn"></button>
-            <button class="icon-btn"></button>
-
+            <Label class="icon-btn">
+                <Image width="16" height="24"
+                        borderRadius="50%"
+                        src="res://circle_bell_icon">
+                    </Image>
+            </Label>
 
 
         </StackLayout>
@@ -52,7 +56,6 @@
         
         
          
-            <ScrollView name="UPCOMING">
             
                 
                 
@@ -80,6 +83,8 @@
                 <!-- Filet Section -->
 
                
+                <ScrollView name="UPCOMING"  orientation="vertical" height="500">
+                    <StackLayout>
 
                 <Label class="heading1-with-bg" text="Today"></Label>
 
@@ -94,7 +99,11 @@
                                 
                                 <Label textWrap="true" text="21 May 2021" class="date pm0">
                                 </Label>
-                                <Label class="bookmark">
+                                <Label class="bookmark" >
+                                    <Image width="16" height="24"
+                                            borderRadius="50%"
+                                            src="res://bookmark">
+                                        </Image>
                                 </Label>
                             </FlexboxLayout>
                             
@@ -132,9 +141,9 @@
 
                                     <StackLayout flexGrow="1" orientation="vertical">
                                         
-                                        <Image width="36" height="36" backgroundColor="#72B1FF"
+                                        <Image width="36" height="36" 
                                             borderRadius="50%"
-                                            src="res://logo">
+                                            src="res://circle_bell_icon">
                                         </Image>
                                         <Label class="h5" textAlignment="center" text="Reminder">
                                         </Label>
@@ -156,9 +165,9 @@
 
 
                                     <StackLayout flexGrow="1" orientation="vertical">
-                                        <Image width="36" height="36" backgroundColor="#72B1FF"
+                                        <Image width="36" height="36" 
                                             borderRadius="50%"
-                                            src="https://play.nativescript.org/dist/assets/img/NativeScript_logo.png">
+                                            src="res://circle_check_icon">
                                         </Image>
                                         <Label class="h5" textAlignment="center" text="Reminder">
                                         </Label>
@@ -355,13 +364,14 @@
                 </StackLayout>
                 <!-- Item end-->
 
-                <Button text="create assignment" class="-primary -rounded-sm primary-btn"></Button>
+            </StackLayout>
 
+            </ScrollView>
+            <Button text="create assignment" class="-primary -rounded-sm primary-btn"></Button>
 
             </StackLayout>
             
         
-        </ScrollView>
 
 
     </GridLayout>

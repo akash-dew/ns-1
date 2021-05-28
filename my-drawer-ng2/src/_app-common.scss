@@ -142,7 +142,7 @@
 .ass-item{
    margin: 0 16 10;
    border-radius:10;
-   background: #ccc;
+   background: #fff;
    color: #000; 
    box-shadow: 0 0 10 rgba(0,0,0,0.2);
 
@@ -164,7 +164,7 @@
       height: 10;
   }
   .barfill{
-    background: orange;
+    background: #000;
     height: 10;
   }
 
@@ -195,9 +195,8 @@
   }
 
   .bookmark{
-    width: 20;
-    height: 20;
-    background: rgba(0,0,0,0.32);
+    width: 16;
+    height: 24;
   }
   .bar-progress{
     margin-bottom: 4;
