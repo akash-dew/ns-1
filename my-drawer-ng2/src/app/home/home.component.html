@@ -21,7 +21,7 @@
     </ActionItem> -->
 
     <NavigationButton visibility="hidden"></NavigationButton>
-    <GridLayout columns="50, *, *" width="100%">
+    <GridLayout columns="50, *, 150" width="100%">
         <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()" col="0"></Label>
 
         <Label class="action-bar-title" text="Assignment" col="1"></Label>
@@ -31,13 +31,17 @@
             <button class="fas icon-btn" text="&#xf0c9;"></button>
             <button class="fas icon-btn" text="&#xf0c9;"></button> -->
 
-
+<!-- 
             <button class="icon-btn"></button>
-            <button class="icon-btn"></button>
-            <Label class="icon-btn">
-                <Image width="16" height="24" borderRadius="50%" src="res://add">
-                </Image>
-            </Label>
+            <button class="icon-btn"></button> -->
+            
+            <Image width="24" height="24" src="res://bell_outline">
+            </Image>
+            <Image width="24" height="24" src="res://chat_outline">
+            </Image>
+            <Image width="24" height="24" src="res://calendar">
+            </Image>
+            
 
 
         </StackLayout>
@@ -58,24 +62,26 @@
             <GridLayout columns="*" rows="64, *, 68">
 
                 <!-- Filet Section -->
-                <FlexboxLayout justifyContent="space-between" row="0" class="top-actions">
+                <FlexboxLayout justifyContent="space-between" alignItems="center" row="0" class="top-actions">
                     <StackLayout>
                         <Button class="-outline" text="Physics">
                         </Button>
                     </StackLayout>
                     <StackLayout>
-                        <FlexboxLayout>
-                            <Button class="-primary -rounded-sm primary-btn" text="Sort">
-                            </Button>
+                        <FlexboxLayout alignItems="center">
+                          
+                            <StackLayout class="btn-cercle">
                             <Image width="36" height="36" borderRadius="50%"
-                                                        src="res://circle_bell_icon">
-                                                    </Image>
-
-                                                    <Image width="36" height="36" borderRadius="50%"
-                                                        src="res://check">
-                                                    </Image>
-                            <!-- <Button class="-primary -rounded-sm primary-btn" text="Filter">
-                            </Button> -->
+                                src="res://circle_filter_icon">
+                            </Image>
+                            </StackLayout>
+                            <StackLayout class="btn-cercle">
+                                <Image width="36" height="36" borderRadius="50%"
+                                src="res://circle_sort_icon">
+                            </Image>
+                            </StackLayout>
+                            
+                           
                         </FlexboxLayout>
                     </StackLayout>
                 </FlexboxLayout>
@@ -99,14 +105,12 @@
 
                                             <Label textWrap="true" text="21 May 2021" class="date pm0">
                                             </Label>
-                                            <Label class="bookmark">
-                                                <Image width="16" height="24" borderRadius="50%" src="res://bookmark">
+                                                <Image width="16" height="24" src="res://bookmark">
                                                 </Image>
-                                            </Label>
                                         </FlexboxLayout>
 
 
-                                        <Label textWrap="true" text="Assignment Title here" class="h2 item-heading">
+                                        <Label textWrap="true" text="Assignment Title hereAssignment Title here" class="h2 item-heading">
                                         </Label>
 
 
