@@ -53,12 +53,8 @@
 <StackLayout class="main-page-container">
 
 
-    <TabView tabsPosition="top" class="tabs-sections">
+    <TabView tabsPosition="top" class="tabs-sections" tabTextFontSize="14" selectedIndex="0">
         <GridLayout *tabItem="{ title: 'UPCOMING' }">
-
-
-
-
             <GridLayout columns="*" rows="64, *, 68">
 
                 <!-- Filet Section -->
@@ -146,7 +142,7 @@
                                                 <StackLayout flexGrow="1" orientation="vertical">
 
                                                     <Image width="36" height="36" borderRadius="50%"
-                                                        src="res://circle_bell_icon">
+                                                        src="res://bell_circle_icon">
                                                     </Image>
                                                     <Label class="h5" textAlignment="center" text="Reminder">
                                                     </Label>
@@ -171,7 +167,7 @@
 
                                                 <StackLayout flexGrow="1" orientation="vertical">
                                                     <Image width="36" height="36" borderRadius="50%"
-                                                        src="res://circle_check_icon">
+                                                        src="res://check_circle_icon">
                                                     </Image>
                                                     <Label class="h5" textAlignment="center" text="Reminder">
                                                     </Label>
@@ -396,11 +392,62 @@
         <GridLayout *tabItem="{ title: 'PAST' }">
 
             <StackLayout name="PAST">
-                <!-- No styles applied -->
+
+
+
+<!-- 
+                <WrapLayout>
+
+                    <StackLayout orientation="vertical" width="100%">
+                        <Label text="Subject"></Label>
+                        <TextField hint="Enter text" class="input-field"></TextField>
+                        <ListPicker [items]="listPickerCountries"></ListPicker>
+
+                        <Switch checked="true" > </Switch>
+
+                    </StackLayout>   
+                    
+                    <StackLayout orientation="vertical" width="100%">
+                        <Label text="Subject"></Label>
+                        <TextField hint="Enter text" class="input-field"></TextField>
+                    </StackLayout>   
+
+                    <StackLayout orientation="vertical" width="50%">
+                        <Label text="Subject"></Label>
+                        <TextField hint="Enter text" class="input-field"></TextField>
+                    </StackLayout>   
+
+                    <StackLayout orientation="vertical" width="50%">
+                        <Label text="Subject"></Label>
+                        <TextField hint="Enter text" class="input-field"></TextField>
+                    </StackLayout>  
+
+                    <StackLayout orientation="vertical" width="50%">
+                        <Label text="Subject"></Label>
+                        <DatePicker [year]="currentYear" [month]="currentMonth"
+                [day]="currentDay" minDate="1970-01-01" maxDate="2100-12-31">
+            </DatePicker>
+                    </StackLayout>   
+
+                    <StackLayout orientation="vertical" width="50%">
+                        <Label text="Subject"></Label>
+                        <DatePicker [year]="currentYear" [month]="currentMonth"
+                        [day]="currentDay" minDate="1970-01-01" maxDate="2100-12-31">
+                    </DatePicker>
+                    </StackLayout>  
+                 
+
+
+                </WrapLayout> -->
+
+            </StackLayout>
+        </GridLayout>
+
+        <GridLayout *tabItem="{ title: 'DRAFTS' }">
+            <StackLayout name="DRAFTS">
+
                 <Button text="Button"></Button>
-                <!-- Using local CSS class -->
                 <Button text=".my-button" class="my-button"></Button>
-                <!-- Using @nativescript/theme CSS classes -->
                 <Button text="Button.-primary" class="-primary"></Button>
                 <Button class="-primary">
                     <FormattedString>
@@ -417,12 +464,8 @@
                 <Button text="Button.-primary[isEnabled=false]" isEnabled="false" class="-primary"></Button>
             </StackLayout>
         </GridLayout>
-
-        <GridLayout *tabItem="{ title: 'DRAFTS' }">
-            <page-router-outlet name="DRAFTS"></page-router-outlet>
-        </GridLayout>
         <GridLayout *tabItem="{ title: 'ALL' }">
-            <page-router-outlet name="ALL"></page-router-outlet>
+            <StackLayout name="ALL"></StackLayout>
         </GridLayout>
     </TabView>
 </StackLayout>

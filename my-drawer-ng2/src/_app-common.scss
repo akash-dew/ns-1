@@ -256,3 +256,34 @@
   // background-color: rgba(0,0,0,0.32);
   margin: 0 10;
 }
+
+
+.input-field{
+  border-width: 1;
+    border-left-style: solid;
+    font-size: 14;
+    padding: 10;
+    border-radius: 5;
+    margin: 0;
+}
+
+
+.form-lable{
+  font-size: 14;
+  color: #ccc;
+  margin: 0 0 6;
+}
+
+.form-row{
+  margin: 0 0 10;
+}
+
+
+.page_create_assignment{
+  background: red;
+  padding: 20;
+}
+.page_create_assignment_form{
+  background: #fff;
+  padding: 20;
+}

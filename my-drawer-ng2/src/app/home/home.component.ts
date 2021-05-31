@@ -7,9 +7,22 @@ import { Application } from '@nativescript/core'
   templateUrl: './home.component.html',
 })
 export class HomeComponent implements OnInit {
+  
+  listPickerCountries: Array<string> = ["Australia", "Belgium", "Bulgaria", "Canada", "Switzerland",
+  "China", "Czech Republic", "Germany", "Spain", "Ethiopia", "Croatia", "Hungary",
+  "Italy", "Jamaica", "Romania", "Russia", "United States"];
+selectedListPickerIndex: number = 0;
+currentDay: number = new Date().getDate();
+currentMonth: number = new Date().getMonth() + 1;
+currentYear: number = new Date().getFullYear();
+
+
+
   constructor() {
     // Use the component constructor to inject providers.
   }
+
+
 
   ngOnInit(): void {
     // Init your component properties here.

@@ -1,13 +1,105 @@
 <ActionBar class="action-bar">
-    <NavigationButton visibility="hidden"></NavigationButton>
-    <GridLayout columns="50, *">
-        <Label class="action-bar-title" text="Browse" colSpan="2"></Label>
+   
+  <NavigationButton visibility="hidden"></NavigationButton>
+  <GridLayout columns="50, *, 150" width="100%">
+      <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()" col="0"></Label>
 
-        <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
-    </GridLayout>
+      <Label class="action-bar-title" text="Create Assignment" col="1"></Label>
+       
+  </GridLayout>
 </ActionBar>
 
-<GridLayout class="page__content">
-  <Label class="page__content-icon far" text="&#xf1ea;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
-</GridLayout>
+
+<ScrollView orientation="vertical" class="page_create_assignment">
+<StackLayout orientation="vertical" width="100%" class="page_create_assignment_form">
+
+  <WrapLayout>
+  
+
+    <StackLayout orientation="vertical" width="100%" class="form-row">
+      <Label text="Estimated Duration" class="form-lable"></Label>
+
+      <FlexboxLayout alignItems="center">
+         
+        <StackLayout flexGrow="1" orientation="vertical">
+            <Image width="36" height="36" borderRadius="50%"
+                src="res://time_15min_icon">
+            </Image>
+            <Label class="h5" textAlignment="center" text="Reminder">
+            </Label>
+        </StackLayout>
+        <StackLayout flexGrow="1" orientation="vertical">
+          <Image width="36" height="36" borderRadius="50%"
+              src="res://time_30min_icon">
+          </Image>
+          <Label class="h5" textAlignment="center" text="Reminder">
+          </Label>
+      </StackLayout>
+      <StackLayout flexGrow="1" orientation="vertical">
+        <Image width="36" height="36" borderRadius="50%"
+            src="res://time_45min_icon">
+        </Image>
+        <Label class="h5" textAlignment="center" text="Reminder">
+        </Label>
+    </StackLayout>
+    <StackLayout flexGrow="1" orientation="vertical">
+      <Image width="36" height="36" borderRadius="50%"
+          src="res://time_60min_icon">
+      </Image>
+      <Label class="h5" textAlignment="center" text="Reminder">
+      </Label>
+  </StackLayout>
+
+    </FlexboxLayout>
+
+    </StackLayout>   
+
+
+
+    <StackLayout orientation="vertical" width="100%" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <TextField hint="Enter text" class="input-field"></TextField>
+        <ListPicker [items]="listPickerCountries"></ListPicker>
+
+        <Switch checked="true" > </Switch>
+
+    </StackLayout>   
+    
+    <StackLayout orientation="vertical" width="100%" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <TextField hint="Enter text" class="input-field"></TextField>
+    </StackLayout>   
+
+    <StackLayout orientation="vertical" width="50%" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <TextField hint="Enter text" class="input-field"></TextField>
+    </StackLayout>   
+
+    <StackLayout orientation="vertical" width="50%" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <TextField hint="Enter text" class="input-field"></TextField>
+    </StackLayout>  
+
+    <StackLayout orientation="vertical" width="50%" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <DatePicker [year]="currentYear" [month]="currentMonth"
+[day]="currentDay" minDate="1970-01-01" maxDate="2100-12-31">
+</DatePicker>
+    </StackLayout>   
+
+    <StackLayout orientation="vertical" width="50%" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <DatePicker [year]="currentYear" [month]="currentMonth"
+        [day]="currentDay" minDate="1970-01-01" maxDate="2100-12-31">
+    </DatePicker>
+
+    <DatePickerField hint="select date"></DatePickerField>
+
+
+    </StackLayout>  
+ 
+
+  </WrapLayout>
+  
+</StackLayout>
+</ScrollView>
