@@ -1,105 +1,210 @@
 <ActionBar class="action-bar">
-   
+
   <NavigationButton visibility="hidden"></NavigationButton>
   <GridLayout columns="50, *, 150" width="100%">
-      <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()" col="0"></Label>
+    <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()" col="0"></Label>
 
-      <Label class="action-bar-title" text="Create Assignment" col="1"></Label>
-       
+    <Label class="action-bar-title" text="Create Assignment" col="1"></Label>
+
   </GridLayout>
 </ActionBar>
 
 
 <ScrollView orientation="vertical" class="page_create_assignment">
-<StackLayout orientation="vertical" width="100%" class="page_create_assignment_form">
 
-  <WrapLayout>
-  
+  <StackLayout>
 
-    <StackLayout orientation="vertical" width="100%" class="form-row">
-      <Label text="Estimated Duration" class="form-lable"></Label>
+    <FlexboxLayout justifyContent="space-between" alignItems="center" class="create-assignment-top">
+      <Label class="h2" text="Untitled Assignment"></Label>
+      
+      <StackLayout>
 
-      <FlexboxLayout alignItems="center">
-         
-        <StackLayout flexGrow="1" orientation="vertical">
-            <Image width="36" height="36" borderRadius="50%"
-                src="res://time_15min_icon">
-            </Image>
-            <Label class="h5" textAlignment="center" text="Reminder">
-            </Label>
-        </StackLayout>
-        <StackLayout flexGrow="1" orientation="vertical">
-          <Image width="36" height="36" borderRadius="50%"
-              src="res://time_30min_icon">
-          </Image>
-          <Label class="h5" textAlignment="center" text="Reminder">
-          </Label>
-      </StackLayout>
-      <StackLayout flexGrow="1" orientation="vertical">
-        <Image width="36" height="36" borderRadius="50%"
-            src="res://time_45min_icon">
+        <Image width="20" height="20" src="res://edit">
         </Image>
-        <Label class="h5" textAlignment="center" text="Reminder">
-        </Label>
+         
     </StackLayout>
-    <StackLayout flexGrow="1" orientation="vertical">
-      <Image width="36" height="36" borderRadius="50%"
-          src="res://time_60min_icon">
-      </Image>
-      <Label class="h5" textAlignment="center" text="Reminder">
-      </Label>
-  </StackLayout>
 
     </FlexboxLayout>
 
-    </StackLayout>   
+  <StackLayout orientation="vertical" class="page_create_assignment_form">
+
+    <WrapLayout>
 
 
+      <StackLayout orientation="vertical" width="100%" class="form-row">
+        <Label text="Estimated Duration" class="form-lable"></Label>
 
-    <StackLayout orientation="vertical" width="100%" class="form-row">
-        <Label text="Subject" class="form-lable"></Label>
-        <TextField hint="Enter text" class="input-field"></TextField>
-        <ListPicker [items]="listPickerCountries"></ListPicker>
+        <FlexboxLayout alignItems="flex-end">
 
-        <Switch checked="true" > </Switch>
+          <StackLayout flexGrow="1" orientation="vertical">
+            <Image width="36" height="36" borderRadius="50%" src="res://time_15min_icon">
+            </Image>
+            <Label class="h5" textAlignment="center" text="15 mins">
+            </Label>
+          </StackLayout>
+          <StackLayout flexGrow="1" orientation="vertical">
+            <Image width="36" height="36" borderRadius="50%" src="res://time_30min_icon">
+            </Image>
+            <Label class="h5" textAlignment="center" text="30 mins">
+            </Label>
+          </StackLayout>
+          <StackLayout flexGrow="1" orientation="vertical">
+            <Image width="36" height="36" borderRadius="50%" src="res://time_45min_icon">
+            </Image>
+            <Label class="h5" textAlignment="center" text="45 mins">
+            </Label>
+          </StackLayout>
+          <StackLayout flexGrow="1" orientation="vertical">
+            <Image width="36" height="36" borderRadius="50%" src="res://time_60min_icon">
+            </Image>
+            <Label class="h5" textAlignment="center" text="60 mins">
+            </Label>
+          </StackLayout>
+          <StackLayout orientation="vertical"  width="60" marginLeft="20">
+            <Label class="h5" textAlignment="center" text="HR:Mins">
+            </Label>                  
+            <GridLayout columns="*,*" rows="*" class="custom-time" height="30">
+                <TextField hint="00" class="input-field" width="20" col="0"></TextField>
+                <TextField hint="00" class="input-field" width="20" col="1"></TextField>
+            </GridLayout>
+          
+            <Label class="h5" textAlignment="center" text="Custom">
+            </Label>
 
-    </StackLayout>   
-    
-    <StackLayout orientation="vertical" width="100%" class="form-row">
-        <Label text="Subject" class="form-lable"></Label>
-        <TextField hint="Enter text" class="input-field"></TextField>
-    </StackLayout>   
+            
+          </StackLayout>
 
-    <StackLayout orientation="vertical" width="50%" class="form-row">
-        <Label text="Subject" class="form-lable"></Label>
-        <TextField hint="Enter text" class="input-field"></TextField>
-    </StackLayout>   
+        </FlexboxLayout>
 
-    <StackLayout orientation="vertical" width="50%" class="form-row">
-        <Label text="Subject" class="form-lable"></Label>
-        <TextField hint="Enter text" class="input-field"></TextField>
-    </StackLayout>  
-
-    <StackLayout orientation="vertical" width="50%" class="form-row">
-        <Label text="Subject" class="form-lable"></Label>
-        <DatePicker [year]="currentYear" [month]="currentMonth"
-[day]="currentDay" minDate="1970-01-01" maxDate="2100-12-31">
-</DatePicker>
-    </StackLayout>   
-
-    <StackLayout orientation="vertical" width="50%" class="form-row">
-        <Label text="Subject" class="form-lable"></Label>
-        <DatePicker [year]="currentYear" [month]="currentMonth"
-        [day]="currentDay" minDate="1970-01-01" maxDate="2100-12-31">
-    </DatePicker>
-
-    <DatePickerField hint="select date"></DatePickerField>
+      </StackLayout>
 
 
-    </StackLayout>  
  
+      
+      <StackLayout orientation="vertical" width="100%" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <TextField hint="Enter text" class="input-field"></TextField>
+      </StackLayout>
 
-  </WrapLayout>
-  
+      <!-- <StackLayout orientation="vertical" width="100%" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <ListPicker [items]="listPickerCountries" class="input-field"></ListPicker>
+
+        
+      </StackLayout> -->
+      <!-- <Switch checked="true"> </Switch> -->
+ 
+       
+      <StackLayout orientation="vertical" width="100%" class="form-row">
+        <Label text="Description" class="form-lable"></Label>
+        <TextView hint="Enter some text..." class="input-field">
+        </TextView>
+      </StackLayout>
+
+
+
+      <GridLayout columns="*,20,*" rows="*">
+
+      <StackLayout col="0" orientation="vertical" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <TextField hint="Enter text" class="input-field"></TextField>
+      </StackLayout>
+
+      <StackLayout col="2" orientation="vertical" class="form-row">
+        <Label text="Subject" class="form-lable"></Label>
+        <TextField hint="Enter text" class="input-field"></TextField>
+      </StackLayout>
+      </GridLayout>
+
+      <GridLayout columns="*,20,*" rows="*">
+        <StackLayout col="0"  orientation="vertical" width="50%" class="form-row">
+          <Label text="Start date" class="form-lable"></Label>
+          <DatePicker [year]="currentYear" [month]="currentMonth" [day]="currentDay" minDate="1970-01-01"
+            maxDate="2100-12-31" class="date-field">
+          </DatePicker>
+        </StackLayout>
+
+
+
+
+        <StackLayout col="2"  orientation="vertical" width="50%" class="form-row">
+          <Label text="Due date" class="form-lable"></Label>
+          <DatePicker [year]="currentYear" [month]="currentMonth" [day]="currentDay" minDate="1970-01-01"
+            maxDate="2100-12-31" year="1980"
+            month="4"
+            day="20" verticalAlignment="center" class="date-field"> 
+          </DatePicker>
+        </StackLayout>
+
+  </GridLayout>
+
+
+      <StackLayout orientation="vertical" width="100%" class="form-row">
+        <Label text="Submission Criteria" class="form-lable"></Label>
+        <TextField hint="No Submission required" class="input-field"></TextField>
+
+
+        <ListView [items]="countries" (itemTap)="onItemTap($event)"
+                style="height:1250px">
+                <ng-template let-country="item">
+                    <FlexboxLayout flexDirection="row">
+                        <Image [src]="country.imageSrc"
+                            class="thumb img-circle"></Image>
+                        <Label [text]="country.name" class="t-12"
+                            verticalAlignment="center" style="width: 60%">
+                        </Label>
+                    </FlexboxLayout>
+                </ng-template>
+            </ListView>
+      </StackLayout>
+
+
+      <GridLayout columns="*,20,*" rows="*">
+
+        <StackLayout col="0" orientation="vertical" width="50%" class="form-row">
+          <Label text="Assignment Type" class="form-lable"></Label>
+
+      <GridLayout columns="80,*" class="add-resource-btn">
+
+          <Switch checked="true" col="0"> </Switch>
+          <Label text="Graded"  col="1" class="form-lable"></Label>
+
+        </GridLayout>
+
+        
+        </StackLayout>
+
+        <StackLayout col="2" orientation="vertical" width="50%" class="form-row">
+          <Label text="Making Scheme" class="form-lable"></Label>
+          <TextField hint="Marks" class="input-field"></TextField>     
+        </StackLayout>
+
+      </GridLayout>
+
+
+
+      <StackLayout orientation="vertical" width="100%" class="form-row">
+        <Label text="Assigned to" class="form-lable"></Label>
+        <TextField hint="No Submission required" class="input-field"></TextField>
+      </StackLayout>
+
+
+
+      <FlexLayout class="add-resource-btn">
+
+      
+        <Image width="16" height="16" src="res://add" class="mr10"></Image>
+                <Label text="Add Resources" class="btn"></Label>
+
+      </FlexLayout>
+
+    </WrapLayout>
+
+  </StackLayout>
+
+
 </StackLayout>
+
+
+
 </ScrollView>

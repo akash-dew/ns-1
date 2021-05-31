@@ -270,20 +270,79 @@
 
 .form-lable{
   font-size: 14;
-  color: #ccc;
+  color: #949494;
   margin: 0 0 6;
 }
 
 .form-row{
-  margin: 0 0 10;
+  margin: 0 0 20;
 }
 
 
 .page_create_assignment{
-  background: red;
-  padding: 20;
+  background: #F0F0F0;
+  padding: 0;
+  margin: 0;
 }
+
 .page_create_assignment_form{
   background: #fff;
   padding: 20;
+  margin: 0 16 20;
+  border-radius: 20;
+  box-shadow: 0 0 10 rgba(0,0,0,0.2);
+
+}
+
+.custom-time{
+  border-radius: 10;
+  border-width: 2;
+  border-style: solid;
+  border-color: #CCCCCC;
+
+  .input-field{
+    border-width: 0;
+    padding: 0;
+    margin: 0;
+    height: 15;
+    background: none;
+  }
+}
+
+.create-assignment-top{
+  margin: 16;
+}
+
+
+// .date-picker {
+//   background-color: olivedrab;
+//   border-color: burlywood;
+//   border-width: 2;
+//   border-radius: 10;
+//   color: whitesmoke;
+//   vertical-align: middle;
+//   height: 30;
+// }
+
+
+.date-field{
+  border-width: 1;
+  border-left-style: solid;
+  border-color: #ccc;
+  font-size: 14;
+  border-radius: 5;
+  padding: 5 10;
+}
+
+.add-resource-btn{
+  padding: 10;
+  .btn{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14;
+  }
+}
+
+.mr10{
+  margin-right: 10;
 }
