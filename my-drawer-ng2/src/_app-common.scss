@@ -295,8 +295,8 @@
 }
 
 .custom-time{
-  border-radius: 10;
-  border-width: 2;
+  border-radius: 15;
+  border-width: 3;
   border-style: solid;
   border-color: #CCCCCC;
 
@@ -304,8 +304,9 @@
     border-width: 0;
     padding: 0;
     margin: 0;
-    height: 15;
+    height: 20;
     background: none;
+    font-size: 18;
   }
 }
 
@@ -345,4 +346,8 @@
 
 .mr10{
   margin-right: 10;
+}
+
+.bold{
+  font-weight: 700;
 }

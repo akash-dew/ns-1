@@ -40,10 +40,7 @@ countries: { name: string, imageSrc: string }[] = [
 
 onItemTap(args: ItemEventData): void {
   console.log('Item with index: ' + args.object + ' tapped');
- 
-  const el = document.querySelector(args.object);
-  el.className += ' active';
-  console.log(el.className); 
+  
 }
 
   constructor() {

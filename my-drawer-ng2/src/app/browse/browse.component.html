@@ -15,7 +15,7 @@
   <StackLayout>
 
     <FlexboxLayout justifyContent="space-between" alignItems="center" class="create-assignment-top">
-      <Label class="h2" text="Untitled Assignment"></Label>
+      <Label class="h2 bold" text="Untitled Assignment"></Label>
       
       <StackLayout>
 
@@ -64,8 +64,8 @@
             <Label class="h5" textAlignment="center" text="HR:Mins">
             </Label>                  
             <GridLayout columns="*,*" rows="*" class="custom-time" height="30">
-                <TextField hint="00" class="input-field" width="20" col="0"></TextField>
-                <TextField hint="00" class="input-field" width="20" col="1"></TextField>
+                <TextField hint="00" class="input-field" width="25" col="0"></TextField>
+                <TextField hint="00" class="input-field" width="25" col="1"></TextField>
             </GridLayout>
           
             <Label class="h5" textAlignment="center" text="Custom">
@@ -144,7 +144,7 @@
         <TextField hint="No Submission required" class="input-field"></TextField>
 
 
-        <ListView [items]="countries" (itemTap)="onItemTap($event)"
+        <!-- <ListView [items]="countries" (itemTap)="onItemTap($event)"
                 style="height:1250px">
                 <ng-template let-country="item">
                     <FlexboxLayout flexDirection="row">
@@ -155,7 +155,7 @@
                         </Label>
                     </FlexboxLayout>
                 </ng-template>
-            </ListView>
+            </ListView> -->
       </StackLayout>
 
 
@@ -198,9 +198,12 @@
 
       </FlexLayout>
 
+
+
     </WrapLayout>
 
   </StackLayout>
+  <Button text="Preview Assignment" class="-primary -rounded-sm primary-btn"></Button>
 
 
 </StackLayout>
@@ -208,3 +211,27 @@
 
 
 </ScrollView>
+
+
+<!-- <ScrollView orientation="vertical" class="page_create_assignment">
+
+  <StackLayout>
+
+    <FlexboxLayout justifyContent="space-between" alignItems="center" class="create-assignment-top">
+      <Label class="h2 bold" text="Add Resource"></Label>
+      
+      <StackLayout>
+
+        <Image width="20" height="20" src="res://edit">
+        </Image>
+         
+    </StackLayout>
+
+    </FlexboxLayout>
+
+  <StackLayout orientation="vertical" class="page_create_assignment_form">
+
+    <WrapLayout></WrapLayout>
+    </StackLayout>
+    </StackLayout>
+    </ScrollView> -->
