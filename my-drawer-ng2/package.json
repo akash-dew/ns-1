@@ -49,6 +49,8 @@
     "@nativescript/angular": "~11.8.0",
     "@nativescript/core": "~8.0.0",
     "@nativescript/theme": "~3.0.1",
+    "@nstudio/nativescript-checkbox": "^2.0.4",
+    "nativescript-drop-down": "^6.0.0",
     "nativescript-ui-sidedrawer": "~9.0.3",
     "reflect-metadata": "~0.1.13",
     "rxjs": "~6.6.7",

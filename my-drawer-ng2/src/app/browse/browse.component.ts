@@ -43,8 +43,14 @@ onItemTap(args: ItemEventData): void {
   
 }
 
+public items: Array<string>;
+
   constructor() {
     // Use the component constructor to inject providers.
+    this.items = [];
+        for (var i = 0; i < 5; i++) {
+            this.items.push("data item " + i);
+        }
   }
   ngOnInit(): void {
     // Init your component properties here.

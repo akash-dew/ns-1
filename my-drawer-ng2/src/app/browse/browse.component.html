@@ -82,8 +82,15 @@
  
       
       <StackLayout orientation="vertical" width="100%" class="form-row">
-        <Label text="Subject" class="form-lable"></Label>
+        <Label text="Subject 132" class="form-lable"></Label>
         <TextField hint="Enter text" class="input-field"></TextField>
+
+        <DropDown #dd
+                  backroundColor="red"
+		              itemsTextAlignment="center"
+                  [items]="items"
+                  row="0"
+                  colSpan="2"></DropDown>
       </StackLayout>
 
       <!-- <StackLayout orientation="vertical" width="100%" class="form-row">
@@ -94,11 +101,15 @@
       </StackLayout> -->
       <!-- <Switch checked="true"> </Switch> -->
  
-       
+
+
       <StackLayout orientation="vertical" width="100%" class="form-row">
         <Label text="Description" class="form-lable"></Label>
+      <CheckBox text="CheckBox Label" checked="false"></CheckBox> 
+
+        <!-- <Label text="Description" class="form-lable"></Label>
         <TextView hint="Enter some text..." class="input-field">
-        </TextView>
+        </TextView> -->
       </StackLayout>
 
 
